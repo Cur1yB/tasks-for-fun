@@ -1,6 +1,10 @@
-"""Дана последовательность целых чисел. Определите минимальную сумму
+'''Given a sequence of integers. Determine the minimum sum of pairs
+of array elements whose indices have a difference of 2.
+If there are no such pairs, print 0.'''
+
+'''Дана последовательность целых чисел. Определите минимальную сумму
 пар элементов массива, расстояние (разница) между индексами которых равно 2.
-Если таких пар нет, выведите 0."""
+Если таких пар нет, выведите 0.'''
 
 
 def pair_counter(elements):
@@ -19,9 +23,6 @@ def pair_counter(elements):
         return min_number
 
 
-test_1 = "3 2 1"
-test_2 = "1 1 12 1 8 7 6 1 4 1 1 1"
-test_3 = "4 3 2 1"
-test_4 = "7 6 5 4 3 2 1"
+numbers = "1 1 12 1 8 7 6 1 4 1 1 1"
 
-print(pair_counter(test_2))
+print(pair_counter(numbers))

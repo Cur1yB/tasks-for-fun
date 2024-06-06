@@ -1,4 +1,22 @@
 """
+Fill in the field for the Minesweeper game.
+
+The input consists of natural numbers m and n, which represent the dimensions
+of the game field, followed by k, the number of mines, and then the
+coordinates of the mines - x and y for each mine, where the numbering
+of the coordinates starts from one.
+
+You need to print the game field:
+
+- If there is a mine in the cell, print "█" for that cell;
+- If there is no mine in the cell, count how many mines are
+located in the neighboring cells (including diagonal, horizontal,
+and vertical neighbors) and print the calculated number for that cell.
+
+Note: Each line ends with a character (not a space!).
+"""
+
+"""
 Заполните поле для игры Сапёр.
 
 На вход подаются натуральные числа m и n - размеры игрового поля,
@@ -25,7 +43,7 @@ def show_map(field):
         print(" ".join(raw))
 
 
-def miner_map(width, height, mines):
+def minesweeper_map(width, height, mines):
     field = [[0 for i in range(width)] for j in range(height)]
     for mine in mines:
         field[mine[0]][mine[1]] = "█"
@@ -66,11 +84,11 @@ def miner_map(width, height, mines):
     show_map(field)
 
 
-width = 10
-height = 2
+width = 9
+height = 9
 mines = []
 for i in range(6):
     mines.append([random.randint(0, height - 1), random.randint(0, width - 1)])
 print("\n")
-miner_map(width, height, mines)
+minesweeper_map(width, height, mines)
 print("\n")

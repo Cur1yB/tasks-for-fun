@@ -1,3 +1,14 @@
+'''
+A matrix (two-dimensional array) consisting of integers is given as input.
+You need to rotate the matrix 90 degrees clockwise.
+'''
+
+'''
+На вход подается матрица (двумерный массив), состоящая из целых чисел.
+Необходимо повернуть матрицу на 90 градусов по часовой стрелке.
+'''
+
+
 def matrix_round(matrix):
     round_matrix = []
     for i in range(len(matrix[0])):
